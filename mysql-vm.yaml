@@ -1,0 +1,20 @@
+apiVersion: vmoperator.vmware.com/v1alpha1
+kind: VirtualMachine
+metadata:
+  name: mysql-vm
+  namespace: namespace-1
+  labels:
+    vm-selector: mysql-vm
+    mysql-vm-lb-tp2i: vm-lb-selector
+spec:
+  className: best-effort-small
+  imageName: vmi-02acc95b9a23713f9
+  storageClass: k8s-storage-policy
+  powerState: poweredOn
+  volumes:
+    - name: mysql-vm1-pvc-0
+      persistentVolumeClaim:
+        claimName: mysql-vm1-pvc-0
+  vmMetadata:
+    secretName: mysql-vm1-bootstrap-secret
+    transport: CloudInit
