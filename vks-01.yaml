@@ -2,7 +2,7 @@ apiVersion: cluster.x-k8s.io/v1beta1
 kind: Cluster
 metadata:
   name: vks-01
-  namespace: namespace-1
+  namespace: cd-demo
   labels:
     tkg-cluster-selector: vks-01
 spec:
