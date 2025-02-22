@@ -4,6 +4,7 @@ metadata:
   name: vks-01
   labels:
     tkg-cluster-selector: vks-01
+    argocd-managed: "true"
 spec:
   clusterNetwork:
     pods:
