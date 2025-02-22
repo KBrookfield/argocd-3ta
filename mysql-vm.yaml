@@ -2,7 +2,6 @@ apiVersion: vmoperator.vmware.com/v1alpha1
 kind: VirtualMachine
 metadata:
   name: mysql-vm
-  namespace: cd-demo
   labels:
     vm-selector: mysql-vm
     mysql-vm-lb-tp2i: vm-lb-selector
